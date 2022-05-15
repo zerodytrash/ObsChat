@@ -921,9 +921,8 @@ function viewerIsMod(viewerId)
 function updateMods(streamName)
 {
     console.log ("Fetching Broadcast....");
-    let proxyUrl = 'https://younow-cors-header.herokuapp.com/?q=',
-        targetUrl = 'https://api.younow.com/php/api/broadcast/info/curId=0/user=' + streamName;
-    let json = fetch (proxyUrl + targetUrl)
+    let proxyUrl = 'https://nowfinity.zerody.one/api/younow/broadcast/info/curId=0/user=' + streamName;
+    let json = fetch (proxyUrl)
         .then (blob => blob.json ())
         .then (data =>
         {
