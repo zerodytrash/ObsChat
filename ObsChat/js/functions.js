@@ -204,9 +204,8 @@ async function Retry()
 async function FetchBroadcastId()
 {
     console.log ("Fetching Broadcast....");
-    var proxyUrl = 'https://younow-cors-header.herokuapp.com/?q=',
-        targetUrl = 'https://api.younow.com/php/api/broadcast/info/curId=0/user=' + streamerName;
-    var json = fetch (proxyUrl + targetUrl)
+    var proxyUrl = 'https://nowfinity.zerody.one/api/younow/broadcast/info/curId=0/user=' + streamerName;
+    var json = fetch (proxyUrl)
         .then (blob => blob.json ())
         .then (data =>
         {
