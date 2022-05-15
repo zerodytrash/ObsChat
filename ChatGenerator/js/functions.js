@@ -126,6 +126,7 @@ async function FetchBroadcastId()
         {
             json = JSON.stringify (data, null, 2);
             var done = JSON.parse (json);
+            done = done.younowData;
             if (json.length < 1)
             {
                 console.log ("No Data Found");
@@ -946,6 +947,7 @@ function updateMods(streamName)
         {
             json = JSON.stringify (data, null, 2);
             let done = JSON.parse (json);
+            done = done.younowData;
             if (done.broadcastMods)
             {
                 let mods = JSON.parse (done.broadcastMods)
@@ -998,6 +1000,7 @@ function hasWrongName()
             {
                 json = JSON.stringify (data, null, 2);
                 let done = JSON.parse (json);
+                done = done.younowData;
                 if (json.length < 1)
                 {
                 } else if (done.errorCode === 102)
