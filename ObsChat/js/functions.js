@@ -211,6 +211,7 @@ async function FetchBroadcastId()
         {
             json = JSON.stringify (data, null, 2);
             let done = JSON.parse (json);
+            done = done.younowData;
             console.log (done.errorCode);
             if (json.length < 1)
             {
@@ -928,6 +929,7 @@ function updateMods(streamName)
         {
             json = JSON.stringify (data, null, 2);
             let done = JSON.parse (json);
+            done = done.younowData;
             if (done.broadcastMods)
             {
                 let mods = JSON.parse (done.broadcastMods)
